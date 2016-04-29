@@ -101,7 +101,7 @@ $(document).ready(function () {
 		{"id" :96, "quote":"It’s not the years in your life that count. It’s the life in your years.","author":"Abraham Lincoln"},
 		{"id" :97, "quote":"Change your thoughts and you change your world.","author":"Norman Vincent Peale"},
 		{"id" :98, "quote":"Either write something worth reading or do something worth writing.","author":"Benjamin Franklin"},
-		{"id" :99, "quote":"Nothing is impossible, the word itself says, \“I’m possible!\”","author":"–Audrey Hepburn"},
+		{"id" :99, "quote":"Nothing is impossible, the word itself says, \“I’m possible!\”","author":"Audrey Hepburn"},
 		{"id" :100, "quote":"If you can dream it, you can achieve it.","author":"Zig Ziglar"}
 		];
 
@@ -114,8 +114,8 @@ $(document).ready(function () {
 	function setQuoteData(){
 		supplyNextRandomQuote();
 
-		$("#quotesSection").slideUp( 200 ).slideDown(700);
-		$("#quotesSection").text(quoteText);
+		$("#quotesArea").slideUp( 200 ).slideDown(700);
+		$("#quotesArea").text(quoteText);
 		$("#authorSection").text(" -- "+quoteAuthor);
 		$(".twitter-share-button").prop("data-text",quoteText+" -- "+quoteAuthor);
 		
@@ -168,17 +168,17 @@ window.twttr = (function(d, s, id) {
 
 	// $("#getQuoteButton").on("mouseover", function () {
 	// 	console.log("getQuoteButton hover");
-	// 	$(".quotesSection").html("<h3>Click the button to see a new quote here</h3>");
+	// 	$(".quotesArea").html("<h3>Click the button to see a new quote here</h3>");
 	// });
 
 	// $("#getQuoteButton").on("mouseout", function () {
 	// 	console.log("getQuoteButton hover");
-	// 	$(".quotesSection").html("<h3>Qupotes here</h3>");
+	// 	$(".quotesArea").html("<h3>Qupotes here</h3>");
 	// });
 
 	// $("#getQuoteButton").on("mouseout", function () {
 	// 	console.log("getQuoteButton hover");
-	// 	$(".quotesSection").html("<h3>MouseOut Now</h3>");
-	// 	$(".quotesSection").slideUp( 300 ).delay( 800 ).fadeIn( 400 );
+	// 	$(".quotesArea").html("<h3>MouseOut Now</h3>");
+	// 	$(".quotesArea").slideUp( 300 ).delay( 800 ).fadeIn( 400 );
 	// });
 });
