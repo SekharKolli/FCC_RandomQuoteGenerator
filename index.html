@@ -2,7 +2,7 @@
 <html>
 <head>
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" >
-	<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+ 	<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/animatecss/3.5.1/animate.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 	<link href='https://fonts.googleapis.com/css?family=Alex+Brush|Kaushan+Script|Josefin+Slab:600|Nunito:700' rel='stylesheet' type='text/css'> 
@@ -11,17 +11,27 @@
 </head>
 <body>
 
-	<div class="container">
+	<div class="container-fluid">
 		<header>
 			<h1> Random Inspirational Quote Generator...</h1>
 		</header>
-		<section class="allButtons">
+		<nav class="allButtons">
 			<div class="row">
-					<button id="getQuoteButton" class="btn btn-warning btn-lg" data-toggle="tooltip" data-placement="bottom" title="click to see next quote">Get a random Quote</button>
+					<button id="getQuoteButton" 
+						class="btn btn-warning btn-lg">
+						Next Random Quote </button>
 
-					<input id="scrollButton" type="checkbox" data-on="auto scroll on" data-off="auto scroll off" data-toggle="toggle" data-onstyle="warning" data-offstyle="info" data-style="slow"> 
+					<input id="scrollButton" 
+						type="checkbox"
+						data-on="auto scroll on"
+						data-off="auto scroll off"
+						data-toggle="toggle"
+						data-onstyle="warning"
+						data-offstyle="info"
+						data-style="slow"> 
 
-					<a href="https://twitter.com/share" 
+					<a href="https://twitter.com/share"
+						name="twitterButton" 
 					   class="twitter-share-button"
 					   data-text="Text of the quote comes here"
 					   data-via="Sekhar_Kolli_"
@@ -29,33 +39,32 @@
 					   data-hashtags="Sekhar_Kolli_,FCC"
 					   >
 					   Tweet this quote</a>
-
 				</div>
-		</section>
+		</nav>
 
-		<i id="quoteSymbol" class="fa fa-5x fa-quote-left fa-pull-left"></i>
 		<section class="quotesSection">
-			<div class="row">
-			<div class="mywell">
-				<div><h3 id="quotesArea">Quotes Come Here</h3></div>
+		<div class="row">
+			<div class="myWell">
+			<div class="container-fluid">
+				
+			<h3> <i id="quoteSymbolLeft" class="fa fa-2x fa-quote-left performAnimations quoteSymbol"></i> <span  id="quotesTextArea">Quotes Come Here</span> <i id="quoteSymbolRight" class=" fa fa-2x fa-quote-right performAnimations quoteSymbol"></i> </h3>
 			</div>
-				<div><h4 id="authorSection">Author Comes Here</h4></div>
+				<h4 id="authorTextArea" class="authorAnimation">Author Comes Here</h4>
 			</div>
+		</div>
 		</section>
 
-		<!-- all the quote data comes here -->
-		<section>
-			<h5 id="dataDump"></h5>
-		</section>
-
+	<!-- My footer that contains the copyright notice -->
 		<footer>
 			<span><i class="fa fa-copyright"></i><p class="siteAuthor">Created By Sekhar Kolli</p></span>
 		</footer>
 
 		</div>
+
 		<!-- All the Scripts come here -->
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+		<script src="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js"></script>
 		<script type="text/javascript" src="myScript.js"></script>
 		</body>
 		</html>

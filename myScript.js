@@ -1,7 +1,5 @@
 $(document).ready(function () {
-
-	function supplyNextRandomQuote() {
-		var data = [
+	var data = [
 		{"id" :0, "quote":"Life isn’t about getting and having, it’s about giving and being.","author":"Kevin Kruse"},
 		{"id" :1, "quote":"Whatever the mind of man can conceive and believe, it can achieve.","author":"Napoleon Hill"},
 		{"id" :2, "quote":"Strive not to be a success, but rather to be of value.","author":"Albert Einstein"},
@@ -102,28 +100,33 @@ $(document).ready(function () {
 		{"id" :97, "quote":"Change your thoughts and you change your world.","author":"Norman Vincent Peale"},
 		{"id" :98, "quote":"Either write something worth reading or do something worth writing.","author":"Benjamin Franklin"},
 		{"id" :99, "quote":"Nothing is impossible, the word itself says, \“I’m possible!\”","author":"Audrey Hepburn"},
-		{"id" :100, "quote":"If you can dream it, you can achieve it.","author":"Zig Ziglar"}
-		];
-
-		quoteNo = Math.round(Math.random() * 100);
-		quoteText = data[quoteNo]["quote"];
-		quoteAuthor = data[quoteNo]["author"];
-	} // supplyNextRandomQuote
-
-	function setQuoteData(){
-		supplyNextRandomQuote();
-
-		$("#quotesArea").slideUp( 200 ).slideDown(700);
-		$("#quotesArea").text(quoteText);
-		$("#authorSection").text(" -- "+quoteAuthor);
-		$(".twitter-share-button").prop("data-text",quoteText+" -- "+quoteAuthor);	
-	} //setQuoteData
-
+		{"id" :100, "quote":"If you can dream it, you can achieve it.","author":"Zig Ziglar"} ];	
 	var quoteNo = 0;
 	var quoteText = "";
 	var quoteAuthor = "";
 
 	setQuoteData();  // updating the intitial page
+
+	function generateRandomQuote() {
+		quoteNo = Math.round(Math.random() * 100);
+		quoteText = data[quoteNo]["quote"];
+		quoteAuthor = data[quoteNo]["author"];
+	} // generateRandomQuote
+
+	function setQuoteData(){
+		generateRandomQuote();
+
+		$("#quotesTextArea").text(quoteText);
+		$("#authorTextArea").text(" -- "+quoteAuthor);
+
+		var animatewith = "animated swing", animateEndEvents = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+		$(".performAnimations").addClass(animatewith).one(animateEndEvents, function () {
+			$(this).removeClass(animatewith);
+		});
+
+
+	} //setQuoteData
+
 
 	$("#getQuoteButton").on("click", function () {
 		setQuoteData(); //set the next quote on page
@@ -131,7 +134,6 @@ $(document).ready(function () {
 
 	var intervalHandle = 0; // Used for turning auto scroll on or off
 	$("#scrollButton").change(function () {
-
 
 		if($(this).prop('checked')) {
 			$("#quoteSymbol").addClass("fa-spin");

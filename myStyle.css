@@ -24,16 +24,18 @@ h1{
 
 }
 
-#quotesArea{
+#quotesTextArea{
 /*font-family: 'Alex Brush', cursive;*/
 font-family: 'Kaushan Script', cursive;
-margin-right: 40px;
+/*margin-right: auto;
+margin-left: auto;*/
 font-size: 45px;
-padding-left: 40px;
+/*padding-right: 20px;
+padding-left: 20px;*/
 
 }
 
-#authorSection{
+#authorTextArea{
 	font-family: 'Nunito', sans-serif;
 	font-size: 25px;
 	padding-right: 40px;
@@ -49,7 +51,7 @@ padding-left: 40px;
 	font-size: 15px;
 }
 
-.mywell{
+.myWell{
 	/*display: block;*/
 	background-color: rgb(240,240,240);
 	border-style: solid;
@@ -74,14 +76,23 @@ padding-left: 40px;
 	padding-left: 30px;
 }
 
-#quoteSymbol {
-	display: block;
-	float: left;
+.quoteSymbol {
+	/*display: block;*/
+	/*float: left;*/
 	border:2px;
 	border-width: 5px;
 	border-color: rgb(150,150,150);
 	/*border-style: solid;*/
 	background-color:transparent;
-	padding: 25px;
-	border-radius: 20px;
+	padding: 10px;
+	/*border-radius: 20px;*/
+}
+
+#quoteSymbolLeft {
+	float: left;
+}
+
+#quoteSymbolRight {
+	padding-top: -30px;
+	float: right;
 }
