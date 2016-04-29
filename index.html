@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" >
+	<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Alex+Brush|Kaushan+Script|Josefin+Slab:600|Nunito:700' rel='stylesheet' type='text/css'> 
+	<link rel="stylesheet" type="text/css" href="myStyle.css">
+	<title>My Random Quote Generator </title>
+</head>
+<body>
+
+	<div class="container">
+		<header>
+			<h1> Random Inspirational Quote Generator...</h1>
+		</header>
+		<section>
+			<div class="row">
+					<button id="getQuoteButton" class="btn btn-warning btn-lg" data-toggle="tooltip" data-placement="bottom" title="click to see next quote">Get a random Quote</button>
+
+					<input id="scrollButton" type="checkbox" data-on="auto scroll on" data-off="auto scroll off" data-toggle="toggle" data-onstyle="warning" data-offstyle="info" data-style="slow"> 
+
+					<a href="https://twitter.com/share" 
+					   class="twitter-share-button"
+					   data-text="Text of the quote comes here"
+					   data-via="Sekhar_Kolli_"
+					   data-size="large"
+					   data-hashtags="Sekhar_Kolli_,FCC">
+					   Tweet this quote</a>
+
+				</div>
+		</section>
+
+		<i id="quoteSymbol" class="fa fa-border fa-5x fa-quote-left fa-pull-left"></i>
+		<section>
+			<div class="row">
+			<div class="well well-lg">
+				<div><h3 id="quotesSection">Quotes Come Here</h3></div>
+			</div>
+				<div><h4 id="authorSection">Author Comes Here</h4></div>
+			</div>
+		</section>
+
+		<!-- all the quote data comes here -->
+		<section>
+			<h5 id="dataDump"></h5>
+		</section>
+
+		<footer>
+			<span><i class="fa fa-copyright"></i><p class="siteAuthor">Created By Sekhar Kolli</p></span>
+		</footer>
+
+		</div>
+		<!-- All the Scripts come here -->
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+		<script type="text/javascript" src="myScript.js"></script>
+		</body>
+		</html>

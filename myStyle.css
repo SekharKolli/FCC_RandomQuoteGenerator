@@ -1,0 +1,41 @@
+body{
+	vertical-align: center;
+	text-align: center;
+	padding: 20px;
+	margin: 20px;
+}
+
+.qaSection {
+	float: none;
+}
+
+h1{
+	font-family: 'Josefin Slab', serif;
+	font-size: 55px;
+	padding-bottom: 50px;
+}
+
+
+#quotesSection{
+/*font-family: 'Alex Brush', cursive;*/
+font-family: 'Kaushan Script', cursive;
+font-size: 45px;
+padding-left: 20px;
+
+}
+
+#authorSection{
+	font-family: 'Nunito', sans-serif;
+	font-size: 25px;
+	padding-right: 40px;
+	text-align: right;
+}
+
+.row {
+	padding: 10px;
+}
+
+.siteAuthor {
+	font-family: sans-serif;
+	font-size: 15px;
+}
