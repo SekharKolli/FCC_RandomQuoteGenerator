@@ -108,7 +108,6 @@ $(document).ready(function () {
 		quoteNo = Math.round(Math.random() * 100);
 		quoteText = data[quoteNo]["quote"];
 		quoteAuthor = data[quoteNo]["author"];
-
 	} // supplyNextRandomQuote
 
 	function setQuoteData(){
@@ -117,22 +116,20 @@ $(document).ready(function () {
 		$("#quotesArea").slideUp( 200 ).slideDown(700);
 		$("#quotesArea").text(quoteText);
 		$("#authorSection").text(" -- "+quoteAuthor);
-		$(".twitter-share-button").prop("data-text",quoteText+" -- "+quoteAuthor);
-		
+		$(".twitter-share-button").prop("data-text",quoteText+" -- "+quoteAuthor);	
 	} //setQuoteData
 
 	var quoteNo = 0;
 	var quoteText = "";
 	var quoteAuthor = "";
 
-	setQuoteData();
+	setQuoteData();  // updating the intitial page
 
 	$("#getQuoteButton").on("click", function () {
-		setQuoteData();
-		//$("#quoteSymbol").slideUp( 300 ).slideDown(500);
+		setQuoteData(); //set the next quote on page
 	});
 
-	var intervalHandle = 0; // Used for turning scroll on and scroll off
+	var intervalHandle = 0; // Used for turning auto scroll on or off
 	$("#scrollButton").change(function () {
 
 
