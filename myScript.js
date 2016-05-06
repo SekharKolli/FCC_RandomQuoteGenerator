@@ -113,17 +113,35 @@ $(document).ready(function () {
 		quoteAuthor = data[quoteNo]["author"];
 	} // generateRandomQuote
 
+	function animElementWithAnimation(element, animateElementWith) {
+		var animateEndEvents = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+
+		// adding the animated class with a space in the front for animations to work
+		animateElementWith += ' animated'; 
+
+		$(element).addClass(animateElementWith).one(animateEndEvents, function () {
+			var self=this;
+			$(self).removeClass(animateElementWith);
+		});
+	}
+
 	function setQuoteData(){
 		generateRandomQuote();
 
 		$("#quotesTextArea").text(quoteText);
 		$("#authorTextArea").text(" -- "+quoteAuthor);
 
-		var animatewith = "animated swing", animateEndEvents = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
-		$(".performAnimations").addClass(animatewith).one(animateEndEvents, function () {
-			$(this).removeClass(animatewith);
-		});
+		animElementWithAnimation("h3","zoomInDown");
+		animElementWithAnimation(".performAnimations","delay swing");
 
+		// var animateQuoteswith = "animated swing";
+		// $(".performAnimations").addClass(animateQuoteswith).one(animateEndEvents, function () {
+		// 	var self=this;
+		// 	$(self).removeClass(animateQuoteswith);
+		// });
+
+
+		//$(".performAnimations").removeClass(animatewith);
 
 	} //setQuoteData
 

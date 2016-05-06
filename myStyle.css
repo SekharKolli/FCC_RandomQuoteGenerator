@@ -5,9 +5,9 @@ body{
 	margin: 20px;
 }
 
-.qaSection {
+/*.qaSection {
 	float: none;
-}
+}*/
 
 h1{
 	font-family: 'Josefin Slab', serif;
@@ -18,10 +18,16 @@ h1{
 .allButtons {
 	/*float: left;*/
     /*width: 300px;*/
-    border: 3px solid #73AD21;
+    /*border: 3px solid #73AD21;*/
     padding: 0px;
     margin: 0px;
 
+}
+
+.slow .toggle-group { transition: left 0.7s; -webkit-transition: left 0.7s; }
+
+.twitter-share-button {
+	float: right; /*Right Align the button*/
 }
 
 #quotesTextArea{
@@ -32,6 +38,8 @@ margin-left: auto;*/
 font-size: 45px;
 /*padding-right: 20px;
 padding-left: 20px;*/
+position: relative;
+padding:2px;
 
 }
 
@@ -96,3 +104,18 @@ padding-left: 20px;*/
 	padding-top: -30px;
 	float: right;
 }
+
+.animated {
+/*  -webkit-animation-duration: 1300ms;
+  -moz-animation-duration: 1300ms;*/
+  animation-duration: 1300ms;
+  animation-delay:300ms;
+  /*animation-iteration-count:2;*/
+}
+
+/*.delay {
+  -animation-delay: 200s;
+  -webkit-animation-delay: 200s;
+  -moz-animation-delay: 200s;
+}
+*/
