@@ -1,3 +1,8 @@
+/*
+Author : Sekhar Kolli
+Credits : Some peices have been learnt from the web and other FreeCodeCamp users
+*/ 
+
 $(document).ready(function () {
 	var data = [
 		{"id" :0, "quote":"Life isn’t about getting and having, it’s about giving and being.","author":"Kevin Kruse"},
@@ -165,37 +170,12 @@ $(document).ready(function () {
 	});
 
 // Twitter Button Code is comes here
-window.twttr = (function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0],
-    t = window.twttr || {};
-  if (d.getElementById(id)) return t;
-  js = d.createElement(s);
-  js.id = id;
-  js.src = "https://platform.twitter.com/widgets.js";
-  fjs.parentNode.insertBefore(js, fjs);
- 
-  t._e = [];
-  t.ready = function(f) {
-    t._e.push(f);
-  };
- 
-  return t;
-}(document, "script", "twitter-wjs"));
 
+  $('#tweet-quote').on('click', function() {
+    
+      var url = 'https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' 
+      			+ encodeURIComponent('"' + quoteText + '" ' + quoteAuthor);
+      window.open(url, 'Share', 'width=550, height=400, toolbar=0, scrollbars=1 ,location=0 ,statusbar=0,menubar=0, resizable=0');
+   });
 
-	// $("#getQuoteButton").on("mouseover", function () {
-	// 	console.log("getQuoteButton hover");
-	// 	$(".quotesArea").html("<h3>Click the button to see a new quote here</h3>");
-	// });
-
-	// $("#getQuoteButton").on("mouseout", function () {
-	// 	console.log("getQuoteButton hover");
-	// 	$(".quotesArea").html("<h3>Qupotes here</h3>");
-	// });
-
-	// $("#getQuoteButton").on("mouseout", function () {
-	// 	console.log("getQuoteButton hover");
-	// 	$(".quotesArea").html("<h3>MouseOut Now</h3>");
-	// 	$(".quotesArea").slideUp( 300 ).delay( 800 ).fadeIn( 400 );
-	// });
 });

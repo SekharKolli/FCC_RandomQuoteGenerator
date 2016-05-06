@@ -28,6 +28,7 @@ h1{
 
 .twitter-share-button {
 	float: right; /*Right Align the button*/
+	/*background: 55acee;*/
 }
 
 #quotesTextArea{
